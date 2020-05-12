@@ -1,6 +1,6 @@
-# Name
+# Spring Petclinic for Google Cloud
 
-Overview
+Spring Petclinig using Cloud SQL on Google Cloud
 
 ## Description
 
