@@ -55,6 +55,24 @@ $ gcloud sql instances describe my-sql |grep connectionName
 </dependency>
 ```
 
+### 3. MySQL Profile
+#### Active profile
+
+Add `spring.profiles.active` in application.properties
+
+```properties
+spring.profiles.active=mysql
+```
+
+#### application-mysql.properties
+
+```properties
+database=mysql
+spring.cloud.gcp.sql.database-name=petclinic
+spring.cloud.gcp.sql.instance-connection-name=YOUR_CLOUD_SQL_CONNECTION_NAME
+spring.datasource.initialization-mode=always
+```
+
 ## Demo
 
 ## Features
