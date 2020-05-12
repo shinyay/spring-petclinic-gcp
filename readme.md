@@ -3,6 +3,24 @@
 Spring Petclinig using Cloud SQL on Google Cloud
 
 ## Description
+### 1. Setup a Cloud SQL (MySQL) instance
+
+Create a new CloudSQL instance
+
+```shell script
+$ gcloud sql instances create my-sql
+```
+
+Create a database for Pet Clinic
+```shell script
+$ gcloud sql databases create petclinic --instance my-sql
+```
+
+Get the Instance Connection Name of the instance in the format project-id:zone-id:instance-id
+
+```shell script
+$ gcloud sql instances describe my-sql |grep connectionName
+```
 
 ## Demo
 
