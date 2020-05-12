@@ -22,6 +22,39 @@ Get the Instance Connection Name of the instance in the format project-id:zone-i
 $ gcloud sql instances describe my-sql |grep connectionName
 ```
 
+### 2. Add  Cloud SQL Dependency
+#### Spring Milestone Repository
+```xml
+<repository>
+  <id>repository.spring.milestone</id>
+  <name>Spring Milestones Repository</name>
+  <url>http://repo.spring.io/milestone</url>
+</repository>
+```
+
+#### Spring Cloud GCP Dependency BOM
+```xml
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-gcp-dependencies</artifactId>
+      <version>1.0.0.RC1</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+```
+
+#### CloudSQL Starter for MySQL
+```xml
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
+</dependency>
+```
+
 ## Demo
 
 ## Features
