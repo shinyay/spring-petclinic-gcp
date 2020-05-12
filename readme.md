@@ -73,6 +73,15 @@ spring.cloud.gcp.sql.instance-connection-name=YOUR_CLOUD_SQL_CONNECTION_NAME
 spring.datasource.initialization-mode=always
 ```
 
+### 4. Verify Cloud SQL
+
+```shell script
+$ gcloud sql connect my-sql -u root
+
+mysql> use petclinic;
+mysql> select * from owners;
+```
+
 ## Demo
 
 ## Features
